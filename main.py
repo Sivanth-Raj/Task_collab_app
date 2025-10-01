@@ -8,7 +8,7 @@ import csv_utils
 from fastapi.responses import StreamingResponse
 from fastapi import status
 from fastapi import Request
-from pydantic import BaseModel
+
 
 
 from database import SessionLocal, engine
