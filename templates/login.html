@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Login</title>
+    <link href="/static/bootstrap.min.css" rel="stylesheet" />
+</head>
+<body>
+<div class="container py-5">
+    <h2>Login</h2>
+
+    {% if error %}
+    <div class="alert alert-danger">{{ error }}</div>
+    {% endif %}
+
+    <form action="/login" method="post" class="row g-3">
+        <div class="col-md-6">
+            <input class="form-control" name="email" type="email" placeholder="Email" required />
+        </div>
+        <div class="col-md-6">
+            <input class="form-control" name="password" type="password" placeholder="Password" required />
+        </div>
+        <div class="col-12">
+            <button class="btn btn-primary">Login</button>
+        </div>
+    </form>
+
+    <a href="/signup" class="btn btn-link">Don't have an account? Sign up</a>
+</div>
+</body>
+</html>
+
+
+
