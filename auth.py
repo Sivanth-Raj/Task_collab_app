@@ -6,7 +6,7 @@ from database import SessionLocal
 import crud, schemas
 from sqlalchemy.orm import Session
 
-SECRET_KEY = "YOUR_SECRET_KEY"  # replace with secure key
+SECRET_KEY = "YOUR_SECRET_KEY" 
 ALGORITHM = "HS256"
 
 # Use Argon2 hashing scheme
