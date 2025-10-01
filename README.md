@@ -52,7 +52,7 @@ Run the application locally:
 
 uvicorn main:app --reload
 
-Access the app via  http://127.0.0.1:8000
+Access the app via  http://127.0.0.1:8000/signup
 
 ## CONFIGURATION
 
