@@ -74,6 +74,8 @@ Access the app via  http://127.0.0.1:8000/signup
 
 4.Use persistent storage or managed DB for SQLite data persistence.
 
+5.Access the app via https://task-collab.onrender.com/login
+
 ## Usage
 
 1.Sign up new users.
