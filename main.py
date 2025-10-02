@@ -126,7 +126,14 @@ def login(request: Request, db: Session = Depends(get_db), email: str = Form(...
     if not user:
         return templates.TemplateResponse("login.html", {"request": request, "error": "Incorrect email or password"})
     response = RedirectResponse("/", status_code=status.HTTP_303_SEE_OTHER)
-    response.set_cookie("access_token", auth.create_access_token({"sub": user.email}))
+    response.set_cookie(
+    "access_token",
+    auth.create_access_token({"sub": user.email}),
+    httponly=True,
+    secure=True,  # Use False if testing over HTTP locally, True for HTTPS in production
+    samesite="lax",
+    path="/"
+)
     return response
 
 
